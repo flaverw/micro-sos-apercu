@@ -159,6 +159,11 @@ section{padding:84px 0}
 
 .foot{background:#0a1220;color:#7f8ea6;text-align:center;padding:34px 26px;font-size:12.5px}
 .foot b{color:#b6c4da}
+
+/* pastille autre version */
+.autre-version{position:fixed;right:16px;bottom:16px;z-index:90;background:rgba(15,24,38,.94);color:#eaf1fb;border:1px solid rgba(43,196,230,.45);border-radius:999px;padding:10px 17px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.5px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 10px 26px -10px rgba(0,0,0,.6);backdrop-filter:blur(6px)}
+.autre-version:hover{border-color:var(--cyan);color:#fff}
+.autre-version .los{color:var(--cyan)}
 </style>
 </head>
 <body>
@@ -303,6 +308,8 @@ section{padding:84px 0}
   <p><b>Micro SOS Computer</b> · 18 rue Sous le Mont, 59330 Hautmont · 03 27 63 43 09</p>
   <p style="margin-top:8px;opacity:.8">Maquette de présentation réalisée par Everywhere · contenu, coordonnées &amp; visuels à valider.</p>
 </footer>
+
+<a class="autre-version" href="reprise/"><span class="los">◇</span> Voir l'autre version</a>
 
 <script>
 document.querySelectorAll('#seg .o').forEach(function(o){o.addEventListener('click',function(){document.querySelectorAll('#seg .o').forEach(function(x){x.classList.remove('on')});o.classList.add('on');});});
