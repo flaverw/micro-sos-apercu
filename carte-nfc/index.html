@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micro SOS — carte NFC</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1826;--ink2:#18233a;--sos:#E4322B;--cyan:#2bc4e6;--light:#f4f7fb}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#333a46;font-family:'Inter',sans-serif;display:flex;flex-wrap:wrap;gap:26px;justify-content:center;align-items:center;min-height:100vh;padding:34px}
+.card{width:648px;height:408px;border-radius:20px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.5);color:#fff}
+.recto{background:var(--ink);position:relative}
+.recto::before{content:"";position:absolute;width:360px;height:360px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(43,196,230,.25),transparent 68%)}
+.recto .inner{position:relative;height:100%;padding:40px 46px;display:flex;flex-direction:column;justify-content:space-between}
+.recto .top{display:flex;align-items:center;gap:16px}
+.recto .mk{width:66px;height:66px;background:var(--ink2);border:1px solid rgba(255,255,255,.15);border-radius:16px;display:grid;place-items:center;font-family:'Sora';font-weight:800;font-size:24px}
+.recto .mk span{color:var(--sos)}
+.recto h1{font-family:'Sora';font-weight:800;font-size:32px;letter-spacing:-1px;line-height:.95}
+.recto h1 span{color:var(--sos)}
+.recto h1 small{display:block;font-family:'IBM Plex Mono';font-size:12px;font-weight:500;letter-spacing:2px;color:var(--cyan);margin-top:6px}
+.recto .slo{font-family:'Sora';font-weight:700;font-size:22px;line-height:1.15}
+.recto .slo em{font-style:normal;color:var(--cyan)}
+.recto .foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:15px}
+.recto .foot b{color:var(--cyan)}
+.recto .tap{border:1.5px solid var(--cyan);color:var(--cyan);padding:8px 15px;font-size:12px;letter-spacing:1px;text-transform:uppercase;border-radius:8px}
+.verso{background:var(--light);color:var(--ink)}
+.verso .inner{height:100%;padding:34px 40px;display:flex;align-items:center;gap:34px}
+.verso .qr{width:200px;height:200px;background:#fff;border:1.5px solid var(--line,#e5ecf4);border-radius:16px;padding:12px;flex:none;box-shadow:0 10px 24px rgba(15,24,38,.12)}
+.verso .qr img{width:100%;height:100%;display:block}
+.verso .rt h2{font-family:'Sora';font-weight:800;font-size:30px;line-height:1;letter-spacing:-.5px}
+.verso .rt p{font-family:'IBM Plex Mono';font-size:13px;color:#54637c;margin:10px 0 16px}
+.verso .rt .row{font-size:16px;margin:5px 0;display:flex;gap:10px;align-items:center;font-weight:500}
+.verso .rt .row b{color:var(--sos)}
+.tagp{position:fixed;bottom:10px;left:0;right:0;text-align:center;color:#ccc;font-family:'IBM Plex Mono';font-size:12px}
+@media print{body{background:#fff;gap:12mm}.tagp{display:none}.card{box-shadow:none}}
+</style>
+</head>
+<body>
+  <div class="card recto">
+    <div class="inner">
+      <div class="top"><div class="mk sora">S<span>O</span>S</div><h1>Micro <span>SOS</span> Computer<small>RÉPARATION · HAUTMONT</small></h1></div>
+      <div class="slo">Votre machine vous lâche ?<br><em>On la remet debout.</em></div>
+      <div class="foot"><div>18 rue Sous le Mont · Hautmont<br><b>03 27 63 43 09</b></div><div class="tap">◗ Approchez</div></div>
+    </div>
+  </div>
+  <div class="card verso">
+    <div class="inner">
+      <div class="qr"><img src="../assets/qr.png" alt="QR"></div>
+      <div class="rt"><h2>Décrivez<br>votre panne.</h2><p>Approchez votre téléphone.</p>
+        <div class="row">🖥️ <span>Ordi · portable · smartphone</span></div>
+        <div class="row">🩺 <span>Diagnostic <b>sous 24 h</b></span></div>
+        <div class="row">⭐ <span>4,7/5 · 159 avis</span></div></div>
+    </div>
+  </div>
+  <div class="tagp">Carte NFC / QR — recto-verso · 85,6 × 54 mm · QR à régénérer vers le domaine propre après signature</div>
+</body>
+</html>
